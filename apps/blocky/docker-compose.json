@@ -1,0 +1,33 @@
+{
+  "services": [
+    {
+      "name": "blocky",
+      "image": "spx01/blocky",
+      "internalPort": 4000,
+      "isMain": true,
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config.yaml",
+          "containerPath": "/app/config.yaml"
+        },
+        {
+          "hostPath": "/etc/localtime",
+          "containerPath": "/etc/localtime",
+          "readOnly": true
+        }
+      ],
+      "addPorts": [
+        {
+          "containerPort": 53,
+          "hostPort": 53,
+          "tcp": true
+        },
+        {
+          "containerPort": 53,
+          "hostPort": 53,
+          "udp": true
+        }
+      ]
+    }
+  ]
+}
