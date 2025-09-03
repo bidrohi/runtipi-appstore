@@ -1,4 +1,4 @@
-# Example App Store Template
+# Bidrohi Runtipi App Store
 
 This repository serves as a template for creating your own custom app store for the Runtipi platform. Use this as a starting point to create and share your own collection of applications.
 
