@@ -1,0 +1,26 @@
+{
+  "$schema": "../app-info-schema.json",
+  "name": "Blocky",
+  "id": "blocky",
+  "available": true,
+  "short_desc": "Blocky is a DNS proxy and ad-blocker for the local network.",
+  "author": "0xERR0R",
+  "port": 8191,
+  "categories": [
+    "network",
+    "utilities"
+  ],
+  "description": "Blocky is a DNS proxy and ad-blocker for the local network.",
+  "tipi_version": 4,
+  "version": "0.26.2",
+  "source": "https://github.com/0xERR0R/blocky",
+  "exposable": false,
+  "supported_architectures": [
+    "arm64",
+    "amd64"
+  ],
+  "created_at": 1756912438000,
+  "updated_at": 1756912434000,
+  "dynamic_config": true,
+  "form_fields": []
+}
