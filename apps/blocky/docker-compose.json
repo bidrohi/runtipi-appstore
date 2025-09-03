@@ -1,0 +1,36 @@
+{
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "blocky",
+      "image": "ghcr.io/0xerr0r/blocky",
+      "isMain": true,
+      "hostname": "blocky",
+      "volumes": [
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config.yaml",
+          "containerPath": "/app/config.yaml"
+        },
+        {
+          "hostPath": "/etc/localtime",
+          "containerPath": "/etc/localtime",
+          "readOnly": true
+        }
+      ],
+      "addPorts": [
+        {
+          "containerPort": 53,
+          "hostPort": 53,
+          "interface": "${NETWORK_INTERFACE:-0.0.0.0}",
+          "tcp": true,
+          "udp": true
+        }
+      ]
+    },
+    {
+      "name": "blocky-frontend",
+      "image": "ghcr.io/mozart409/blocky-frontend",
+      "internalPort": 8002
+    }
+  ]
+}
