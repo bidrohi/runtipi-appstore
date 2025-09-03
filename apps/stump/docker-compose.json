@@ -1,0 +1,26 @@
+{
+  "$schema": "../dynamic-compose-schema.json",
+  "services": [
+    {
+      "name": "stump",
+      "image": "aaronleopold/stump",
+      "internalPort": 10801,
+      "isMain": true,
+      "hostname": "stump",
+      "volumes": [
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/books",
+          "containerPath": "/data/books"
+        },
+        {
+          "hostPath": "${ROOT_FOLDER_HOST}/media/data/comics",
+          "containerPath": "/data/comics"
+        },
+        {
+          "hostPath": "${APP_DATA_DIR}/data/config",
+          "containerPath": "/config"
+        }
+      ]
+    }
+  ]
+}
